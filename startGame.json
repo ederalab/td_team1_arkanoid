@@ -21,18 +21,18 @@
                     "name": "collisionBase",
                     "type": "ColliderComponent",
                     "AABB": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 64,
-                        "height": 64
+                        "x": 320,
+                        "y": 600,
+                        "width": 88,
+                        "height": 22
                     }
                 }
             ]
         },
         {
             "name": "ball",
-            "x": 200,
-            "y": 200,
+            "x": 320,
+            "y": 370,
             "components": [{
                     "name": "sprite",
                     "type": "StaticSpriteComponent",
@@ -42,13 +42,13 @@
                     "name": "bouncing",
                     "type": "BouncingMovementComponent",
                     "boundingRect": {
-                        "x": 0,
-                        "y": 0,
-                        "width": 640,
+                        "x": 320,
+                        "y": 370,
+                        "width": 656,
                         "height": 640
                     },
-                    "vx": 100,
-                    "vy": 50
+                    "vx": 150,
+                    "vy": 150
                 },
                 {
                     "name": "collisionBall",
@@ -56,8 +56,8 @@
                     "AABB": {
                         "x": 0,
                         "y": 0,
-                        "width": 64,
-                        "height": 64
+                        "width": 32,
+                        "height": 32
                     }
                 }
             ]
@@ -72,13 +72,13 @@
                     "fileName": "assets/Arkanoid_Brick_Orange.png"
                 },
                 {
-                    "name": "collisionOrange",
+                    "name": "collisionOrange1",
                     "type": "ColliderComponent",
                     "AABB": {
-                        "x": 0,
-                        "y": 0,
+                        "x": 32,
+                        "y": 100,
                         "width": 64,
-                        "height": 64
+                        "height": 32
                     }
                 }
             ]
@@ -93,13 +93,13 @@
                     "fileName": "assets/Arkanoid_Brick_Orange.png"
                 },
                 {
-                    "name": "collisionOrange",
+                    "name": "collisionOrange2",
                     "type": "ColliderComponent",
                     "AABB": {
-                        "x": 0,
-                        "y": 0,
+                        "x": 98,
+                        "y": 100,
                         "width": 64,
-                        "height": 64
+                        "height": 32
                     }
                 }
             ]
@@ -114,13 +114,13 @@
                     "fileName": "assets/Arkanoid_Brick_Orange.png"
                 },
                 {
-                    "name": "collisionOrange",
+                    "name": "collisionOrange3",
                     "type": "ColliderComponent",
                     "AABB": {
-                        "x": 0,
-                        "y": 0,
+                        "x": 164,
+                        "y": 100,
                         "width": 64,
-                        "height": 64
+                        "height": 32
                     }
                 }
             ]
@@ -135,13 +135,13 @@
                     "fileName": "assets/Arkanoid_Brick_Orange.png"
                 },
                 {
-                    "name": "collisionOrange",
+                    "name": "collisionOrange4",
                     "type": "ColliderComponent",
                     "AABB": {
-                        "x": 0,
-                        "y": 0,
+                        "x": 230,
+                        "y": 100,
                         "width": 64,
-                        "height": 64
+                        "height": 32
                     }
                 }
             ]
@@ -156,13 +156,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Orange.png"
             }, {
-                "name": "collisionOrange",
+                "name": "collisionOrange5",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 296,
+                    "y": 100,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -175,13 +175,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Orange.png"
             }, {
-                "name": "collisionOrange",
+                "name": "collisionOrange6",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 362,
+                    "y": 100,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -194,13 +194,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Orange.png"
             }, {
-                "name": "collisionOrange",
+                "name": "collisionOrange7",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 428,
+                    "y": 100,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -213,13 +213,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Orange.png"
             }, {
-                "name": "collisionOrange",
+                "name": "collisionOrange8",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 494,
+                    "y": 100,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -232,13 +232,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Orange.png"
             }, {
-                "name": "collisionOrange",
+                "name": "collisionOrange9",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 560,
+                    "y": 100,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -252,13 +252,13 @@
                     "fileName": "assets/Arkanoid_Brick_Orange.png"
                 },
                 {
-                    "name": "collisionOrange",
+                    "name": "collisionOrange10",
                     "type": "ColliderComponent",
                     "AABB": {
-                        "x": 0,
-                        "y": 0,
+                        "x": 626,
+                        "y": 100,
                         "width": 64,
-                        "height": 64
+                        "height": 32
                     }
                 }
             ]
@@ -272,13 +272,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Green.png"
             }, {
-                "name": "collisionGreen",
+                "name": "collisionGreen1",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 32,
+                    "y": 134,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -291,13 +291,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Green.png"
             }, {
-                "name": "collisionGreen",
+                "name": "collisionGreen2",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 98,
+                    "y": 134,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -310,13 +310,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Green.png"
             }, {
-                "name": "collisionGreen",
+                "name": "collisionGreen3",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 164,
+                    "y": 134,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -330,13 +330,13 @@
                     "fileName": "assets/Arkanoid_Brick_Green.png"
                 },
                 {
-                    "name": "collisionGreen",
+                    "name": "collisionGreen4",
                     "type": "ColliderComponent",
                     "AABB": {
-                        "x": 0,
-                        "y": 0,
+                        "x": 230,
+                        "y": 134,
                         "width": 64,
-                        "height": 64
+                        "height": 32
                     }
                 }
             ]
@@ -350,13 +350,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Green.png"
             }, {
-                "name": "collisionGreen",
+                "name": "collisionGreen5",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 296,
+                    "y": 134,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -369,13 +369,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Green.png"
             }, {
-                "name": "collisionGreen",
+                "name": "collisionGreen6",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 362,
+                    "y": 134,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -388,13 +388,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Green.png"
             }, {
-                "name": "collisionGreen",
+                "name": "collisionGreen7",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 428,
+                    "y": 134,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -407,13 +407,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Green.png"
             }, {
-                "name": "collisionGreen",
+                "name": "collisionGreen8",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 494,
+                    "y": 134,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -426,13 +426,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Green.png"
             }, {
-                "name": "collisionGreen",
+                "name": "collisionGreen9",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 560,
+                    "y": 134,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -445,13 +445,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Arkanoid_Brick_Green.png"
             }, {
-                "name": "collisionGreen",
+                "name": "collisionGreen10",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 626,
+                    "y": 134,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -465,13 +465,13 @@
                     "fileName": "assets/Brick_blue.png"
                 },
                 {
-                    "name": "collisionBlue",
+                    "name": "collisionBlue1",
                     "type": "ColliderComponent",
                     "AABB": {
-                        "x": 0,
-                        "y": 0,
+                        "x": 32,
+                        "y": 168,
                         "width": 64,
-                        "height": 64
+                        "height": 32
                     }
                 }
             ]
@@ -485,13 +485,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Brick_blue.png"
             }, {
-                "name": "collisionBlue",
+                "name": "collisionBlue2",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 98,
+                    "y": 168,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -504,13 +504,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Brick_blue.png"
             }, {
-                "name": "collisionBlue",
+                "name": "collisionBlue3",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 164,
+                    "y": 168,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -523,13 +523,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Brick_blue.png"
             }, {
-                "name": "collisionBlue",
+                "name": "collisionBlue4",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 230,
+                    "y": 168,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -542,13 +542,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Brick_blue.png"
             }, {
-                "name": "collisionBlue",
+                "name": "collisionBlue5",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 296,
+                    "y": 168,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -561,13 +561,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Brick_blue.png"
             }, {
-                "name": "collisionBlue",
+                "name": "collisionBlue6",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 362,
+                    "y": 168,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -580,13 +580,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Brick_blue.png"
             }, {
-                "name": "collisionBlue",
+                "name": "collisionBlue7",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 428,
+                    "y": 168,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -599,13 +599,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Brick_blue.png"
             }, {
-                "name": "collisionBlue",
+                "name": "collisionBlue8",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 494,
+                    "y": 168,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -618,13 +618,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Brick_blue.png"
             }, {
-                "name": "collisionBlue",
+                "name": "collisionBlue9",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 560,
+                    "y": 168,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         },
@@ -637,13 +637,13 @@
                 "type": "StaticSpriteComponent",
                 "fileName": "assets/Brick_blue.png"
             }, {
-                "name": "collisionBlue",
+                "name": "collisionBlue10",
                 "type": "ColliderComponent",
                 "AABB": {
-                    "x": 0,
-                    "y": 0,
+                    "x": 626,
+                    "y": 168,
                     "width": 64,
-                    "height": 64
+                    "height": 32
                 }
             }]
         }

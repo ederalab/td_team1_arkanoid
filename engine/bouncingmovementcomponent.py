@@ -26,3 +26,5 @@ class BouncingMovementComponent(Component):
         # bounce on the y axis
         if self.owner.y < 0 or self.owner.y > self.boundingRect.height:
             self.vy = - self.vy
+            
+        print(self.owner.y)
