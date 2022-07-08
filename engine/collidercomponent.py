@@ -22,18 +22,22 @@ class ColliderComponent(Component):
         self.AABB.y = self.owner.y
         
     def onCollision(self, otherCollider):
+        
         if self.name != "collisionBase" and otherCollider.name == "collisionBall":
             self.actor.y = -300
+            #to start
             if len(listCollider) == 0:
                 listCollider.append(otherCollider)
-                print(listCollider, "1")
+        #collision with base
         if self.name == "collisionBall" and otherCollider.name == "collisionBase":
             if len(listCollider)==1:
                 listCollider.append(otherCollider)
-                print(listCollider, "2")
             return True
-    print(listCollider)
-            #print(f"{self.name} Colliding with {otherCollider.name}")       
+        #collision with brick
+        if self.name == "collisionBall" and otherCollider.name != "collisionBase":
+            if len(listCollider)==1:
+                listCollider.append(otherCollider)
+            return False
            
     def removeActor(self, otherCollider):
         pass

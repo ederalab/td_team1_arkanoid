@@ -34,8 +34,8 @@ class FloatingMovementComponent(Component):
         if key == pygame.locals.K_LEFT:
             if self.owner.x < 40:
                 self.owner.x = 40
-            else: self.vx = -100
+            else: self.vx = -160
         if key == pygame.locals.K_RIGHT:
             if self.owner.x > 600:
                 self.owner.x = 600
-            else: self.vx = 100
+            else: self.vx = 160

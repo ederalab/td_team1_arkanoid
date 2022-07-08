@@ -4,6 +4,7 @@ from .scenefactory import SceneFactory
 import pygame.locals
 from .collisionsystem import CollisionSystem
 from .scene import Scene
+from .bouncingmovementcomponent import *
 
 class Singleton(type):
     _instances = {}
@@ -21,6 +22,7 @@ class Engine(metaclass = Singleton):
         self.scene = None
         self.window = None
         self.quit = False
+        global counter
         self.newTime = time.time()
         self.oldTime = self.newTime
     
@@ -66,19 +68,12 @@ class Engine(metaclass = Singleton):
         WHITE = (255, 255, 255)
         self.window.fill(BLACK)
 
-        self.scene.render(self.window)
+        self.scene.render(self.window)    
         
-        # Print start game
-        font = pygame.font.SysFont(None, 48)
-        text = font.render('Press Space to start the Game.', True, WHITE)
-        textRect = text.get_rect()
-        textRect.centerx = self.window.get_rect().centerx
-        textRect.centery = self.window.get_rect().centery
-        self.window.blit(text, textRect)
         
         # Print life
         font = pygame.font.SysFont(None, 36)
-        text = font.render('Life: 3', True, WHITE)
+        text = font.render(f"Life: {len(counter)}", True, WHITE)
         textRect = text.get_rect()
         textRect.centerx = 590
         textRect.centery = 622

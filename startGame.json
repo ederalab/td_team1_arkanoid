@@ -5,6 +5,37 @@
         "title": "Arkanoid demo"
     },
     "actors": [{
+            "name": "gameover",
+            "x": 300,
+            "y": 300,
+            "components": [{
+                "name": "gameover",
+                "type": "GameOverComponent",
+                "fileName": "assets/gameover.png"
+            }]
+        },
+        {
+            "name": "start-game",
+            "x": 300,
+            "y": 300,
+            "components": [{
+                    "name": "sprite",
+                    "type": "StaticSpriteComponent",
+                    "fileName": "assets/press_space.png"
+                },
+                {
+                    "name": "collisionStart",
+                    "type": "ColliderComponent",
+                    "AABB": {
+                        "x": 300,
+                        "y": 300,
+                        "width": 656,
+                        "height": 132
+                    }
+                }
+            ]
+        },
+        {
             "name": "base",
             "x": 320,
             "y": 600,
@@ -47,8 +78,8 @@
                         "width": 656,
                         "height": 640
                     },
-                    "vx": 150,
-                    "vy": -150
+                    "vx": 0,
+                    "vy": 0
                 },
                 {
                     "name": "collisionBall",
