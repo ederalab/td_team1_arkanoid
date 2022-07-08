@@ -15,6 +15,16 @@
             }]
         },
         {
+            "name": "winner",
+            "x": 300,
+            "y": 300,
+            "components": [{
+                "name": "winner",
+                "type": "WinnerComponent",
+                "fileName": "assets/you_win.png"
+            }]
+        },
+        {
             "name": "start-game",
             "x": 300,
             "y": 300,

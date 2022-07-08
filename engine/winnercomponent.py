@@ -1,12 +1,13 @@
 from .component import Component
 from .bouncingmovementcomponent import *
+from engine.collidercomponent import *
 import pygame
 
-class GameOverComponent(Component):
+class WinnerComponent(Component):
     def __init__(self, assetFileName, name, actor):
         super().__init__(name, actor)
         self.assetFileName = assetFileName
-        global counter
+        global listBrick
         self.image = None
 
     def load(self):
@@ -14,9 +15,9 @@ class GameOverComponent(Component):
         
             
     def render(self, surface):
-        if len(counter)<1 and self.image != None:
+        #for win
+        if len(listBrick)>30 and self.image != None:
             rect = self.image.get_rect()
             rect.centerx = self.owner.x
             rect.centery = self.owner.y
             surface.blit(self.image, rect)
-      

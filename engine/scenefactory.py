@@ -4,6 +4,7 @@ from engine.component import *
 from engine.actor import *
 from engine.staticspritecomponent import *
 from engine.gameovercomponent import *
+from engine.winnercomponent import *
 from engine.bouncingmovementcomponent import *
 from .floatingmovementcomponent import *
 from .pathmovementcomponent import *
@@ -36,6 +37,8 @@ class SceneFactory:
                             component = StaticSpriteComponent(componentDescriptor["fileName"], componentDescriptor["name"], actor)
                         elif componentDescriptor["type"] == GameOverComponent.__name__:
                             component = GameOverComponent(componentDescriptor["fileName"], componentDescriptor["name"], actor)
+                        elif componentDescriptor["type"] == WinnerComponent.__name__:
+                            component = WinnerComponent(componentDescriptor["fileName"], componentDescriptor["name"], actor)
                         elif componentDescriptor["type"] == BouncingMovementComponent.__name__:
                             rectDescriptor = componentDescriptor["boundingRect"]
                             r = rect.Rect(rectDescriptor["x"], rectDescriptor["y"],

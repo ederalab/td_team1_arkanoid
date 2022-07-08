@@ -3,6 +3,7 @@ import pygame
 
 
 listCollider = []
+listBrick = []
 class ColliderComponent(Component):
     
     
@@ -11,6 +12,7 @@ class ColliderComponent(Component):
         self.AABB = AABB
         self.actor = actor
         global listCollider
+        global listBrick
         
     def load(self):
         from .engine import Engine
@@ -24,7 +26,9 @@ class ColliderComponent(Component):
     def onCollision(self, otherCollider):
         
         if self.name != "collisionBase" and otherCollider.name == "collisionBall":
-            self.actor.y = -300
+            self.owner.y= -100
+            listBrick.append(1)
+            print(len(listBrick))
             #to start
             if len(listCollider) == 0:
                 listCollider.append(otherCollider)
