@@ -32,7 +32,7 @@
         {
             "name": "ball",
             "x": 320,
-            "y": 370,
+            "y": 580,
             "components": [{
                     "name": "sprite",
                     "type": "StaticSpriteComponent",
@@ -43,19 +43,19 @@
                     "type": "BouncingMovementComponent",
                     "boundingRect": {
                         "x": 320,
-                        "y": 370,
+                        "y": 580,
                         "width": 656,
                         "height": 640
                     },
                     "vx": 150,
-                    "vy": 150
+                    "vy": -150
                 },
                 {
                     "name": "collisionBall",
                     "type": "ColliderComponent",
                     "AABB": {
-                        "x": 0,
-                        "y": 0,
+                        "x": 320,
+                        "y": 580,
                         "width": 32,
                         "height": 32
                     }

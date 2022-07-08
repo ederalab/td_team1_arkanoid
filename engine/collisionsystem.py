@@ -11,7 +11,7 @@ class CollisionSystem:
                 if a is not b:
                     if a.AABB.colliderect(b.AABB):
                         a.onCollision(b)
-                        
+                    
     def registerCollider(self, collider):
         self.colliders.append(collider)
         

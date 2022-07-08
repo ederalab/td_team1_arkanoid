@@ -37,7 +37,7 @@ class SceneFactory:
                             rectDescriptor = componentDescriptor["boundingRect"]
                             r = rect.Rect(rectDescriptor["x"], rectDescriptor["y"],
                                 rectDescriptor["width"], rectDescriptor["height"])
-                            component = BouncingMovementComponent(componentDescriptor["name"], actor, r)
+                            component = BouncingMovementComponent(componentDescriptor["name"], actor, r, componentDescriptor["vx"], componentDescriptor["vy"])
                         elif componentDescriptor["type"] == FloatingMovementComponent.__name__:
                             component = FloatingMovementComponent(componentDescriptor["name"], actor)
                         elif componentDescriptor["type"] == PathMovementComponent.__name__:

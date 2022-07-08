@@ -63,9 +63,26 @@ class Engine(metaclass = Singleton):
     def render(self):
         # clear the screen
         BLACK = (0, 0, 0)
+        WHITE = (255, 255, 255)
         self.window.fill(BLACK)
 
         self.scene.render(self.window)
+        
+        # Print start game
+        font = pygame.font.SysFont(None, 48)
+        text = font.render('Press Space to start the Game.', True, WHITE)
+        textRect = text.get_rect()
+        textRect.centerx = self.window.get_rect().centerx
+        textRect.centery = self.window.get_rect().centery
+        self.window.blit(text, textRect)
+        
+        # Print life
+        font = pygame.font.SysFont(None, 36)
+        text = font.render('Life: 3', True, WHITE)
+        textRect = text.get_rect()
+        textRect.centerx = 590
+        textRect.centery = 622
+        self.window.blit(text, textRect)
         
         # update the display with the new content of the window
         pygame.display.update()

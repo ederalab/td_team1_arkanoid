@@ -1,14 +1,16 @@
 from .component import Component
-#from bouncingmovementcomponent import BouncingMovementComponent
 import pygame
 
-class ColliderComponent(Component):
 
+listCollider = []
+class ColliderComponent(Component):
+    
+    
     def __init__(self, name, actor, AABB):
         super().__init__(name, actor)
-        self.vy = 100
         self.AABB = AABB
         self.actor = actor
+        global listCollider
         
     def load(self):
         from .engine import Engine
@@ -20,19 +22,20 @@ class ColliderComponent(Component):
         self.AABB.y = self.owner.y
         
     def onCollision(self, otherCollider):
-        #print(self.owner.y)
         if self.name != "collisionBase" and otherCollider.name == "collisionBall":
             self.actor.y = -300
+            if len(listCollider) == 0:
+                listCollider.append(otherCollider)
+                print(listCollider, "1")
         if self.name == "collisionBall" and otherCollider.name == "collisionBase":
-            #print(f"{self.name} Colliding with {otherCollider.name}")
-            self.vy = - self.vy
-            self.owner.y += self.vy
-            print("mario")
-            #print(self.owner.y)
-            #print(self.vy)"""
-            
-        
-        
+            if len(listCollider)==1:
+                listCollider.append(otherCollider)
+                print(listCollider, "2")
+            return True
+    print(listCollider)
+            #print(f"{self.name} Colliding with {otherCollider.name}")       
            
     def removeActor(self, otherCollider):
         pass
+            
+          
