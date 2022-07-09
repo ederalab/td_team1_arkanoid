@@ -28,7 +28,6 @@ class ColliderComponent(Component):
         if self.name != "collisionBase" and otherCollider.name == "collisionBall":
             self.owner.y= -100
             listBrick.append(1)
-            print(len(listBrick))
             #to start
             if len(listCollider) == 0:
                 listCollider.append(otherCollider)

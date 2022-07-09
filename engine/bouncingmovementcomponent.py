@@ -2,7 +2,7 @@ from .component import *
 from engine.collidercomponent import *
 import pygame.locals
 
-
+counter_center = []
 counter = [1, 2, 3]
 class BouncingMovementComponent(Component):
     # Owner could be empty at first
@@ -14,6 +14,7 @@ class BouncingMovementComponent(Component):
         super().__init__(name, actor)
         self.vx = vx
         self.vy = vy
+        global counter_center
         global counter 
         global listCollider
         self.boundingRect = boundingRect
@@ -69,5 +70,5 @@ class BouncingMovementComponent(Component):
             self.owner.y = 580
             self.vx = 150
             self.vy = -150
-            
-            
+            if len(counter_center)<1:
+                counter_center.append(1)

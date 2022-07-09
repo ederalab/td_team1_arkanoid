@@ -1,5 +1,6 @@
 import pygame.locals
 from .component import *
+from .bouncingmovementcomponent import *
 
 
 class FloatingMovementComponent(Component):
@@ -10,7 +11,8 @@ class FloatingMovementComponent(Component):
         engine = Engine() # this is a singleton, don't worry too much
         engine.inputSystem.bindToKeyboard(pygame.locals.K_LEFT, self.keyPressed)
         engine.inputSystem.bindToKeyboard(pygame.locals.K_RIGHT, self.keyPressed)
-
+        
+        global counter_center
         self.vx = 0
         self.vy = 0
         
@@ -20,15 +22,16 @@ class FloatingMovementComponent(Component):
         
         if self.owner.x < 75:
             self.vx = 0
+            
+        if len(counter_center)==1:
+            self.owner.x = 320
+            self.vx = 0
+            counter_center.clear()
         # inertia
         if self.vx > 0:
-            self.vx = self.vx - 100 * deltaTime
+            self.vx = self.vx - 250 * deltaTime
         if self.vx < 0:
-            self.vx = self.vx + 100 * deltaTime
-        if self.vy > 0:
-            self.vy = self.vy - 100 * deltaTime
-        if self.vy < 0:
-            self.vy = self.vy + 100 * deltaTime
+            self.vx = self.vx + 250 * deltaTime
             
     def keyPressed(self, key):
         if key == pygame.locals.K_LEFT:
@@ -39,3 +42,4 @@ class FloatingMovementComponent(Component):
             if self.owner.x > 600:
                 self.owner.x = 600
             else: self.vx = 160
+        
