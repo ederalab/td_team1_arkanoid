@@ -28,7 +28,13 @@ class BouncingMovementComponent(Component):
         
         self.owner.x += self.vx * deltaTime
         self.owner.y += self.vy * deltaTime
-
+        
+        #if gameover or winner
+        if len(counter)<1 or len(listBrick)>30:
+            self.owner.x = 320
+            self.owner.y = 580
+            self.vx = 0
+            self.vy = 0
 
         # bounce on the x axis
         if self.owner.x < 0 or self.owner.x > self.boundingRect.width:
