@@ -5,7 +5,7 @@ from engine.collidercomponent import *
 
 
 class FloatingMovementComponent(Component):
-    def __init__(self, name, actor):    
+    def __init__(self, name, actor, n_actor):    
         from .engine import Engine
 
         super().__init__(name, actor)
@@ -16,6 +16,7 @@ class FloatingMovementComponent(Component):
         global counter_center
         global listBrick
         global counter
+        self.n_actor = n_actor
         self.vx = 0
         self.vy = 0
         
@@ -27,7 +28,7 @@ class FloatingMovementComponent(Component):
             self.vx = 0
         
         #center base when press space or lose or win
-        if len(counter_center)==1 or len(counter)<1 or len(listBrick)>30:
+        if len(counter_center)==1 or len(counter)<1 or len(listBrick)>self.n_actor:
             self.owner.x = 320
             self.vx = 0
             counter_center.clear()

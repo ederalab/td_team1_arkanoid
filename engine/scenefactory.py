@@ -38,14 +38,14 @@ class SceneFactory:
                         elif componentDescriptor["type"] == GameOverComponent.__name__:
                             component = GameOverComponent(componentDescriptor["fileName"], componentDescriptor["name"], actor)
                         elif componentDescriptor["type"] == WinnerComponent.__name__:
-                            component = WinnerComponent(componentDescriptor["fileName"], componentDescriptor["name"], actor)
+                            component = WinnerComponent(componentDescriptor["fileName"], componentDescriptor["name"], actor, componentDescriptor["n_actor"])
                         elif componentDescriptor["type"] == BouncingMovementComponent.__name__:
                             rectDescriptor = componentDescriptor["boundingRect"]
                             r = rect.Rect(rectDescriptor["x"], rectDescriptor["y"],
                                 rectDescriptor["width"], rectDescriptor["height"])
-                            component = BouncingMovementComponent(componentDescriptor["name"], actor, r, componentDescriptor["vx"], componentDescriptor["vy"])
+                            component = BouncingMovementComponent(componentDescriptor["name"], actor, r, componentDescriptor["vx"], componentDescriptor["vy"], componentDescriptor["n_actor"])
                         elif componentDescriptor["type"] == FloatingMovementComponent.__name__:
-                            component = FloatingMovementComponent(componentDescriptor["name"], actor)
+                            component = FloatingMovementComponent(componentDescriptor["name"], actor, componentDescriptor["n_actor"])
                         elif componentDescriptor["type"] == PathMovementComponent.__name__:
                             component = PathMovementComponent(componentDescriptor["name"], actor, componentDescriptor["path"])
                         elif componentDescriptor["type"] == ColliderComponent.__name__:

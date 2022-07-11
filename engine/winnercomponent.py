@@ -4,11 +4,12 @@ from engine.collidercomponent import *
 import pygame
 
 class WinnerComponent(Component):
-    def __init__(self, assetFileName, name, actor):
+    def __init__(self, assetFileName, name, actor, n_actor):
         super().__init__(name, actor)
         self.assetFileName = assetFileName
         global listBrick
         self.image = None
+        self.n_actor = n_actor
 
     def load(self):
         self.image = pygame.image.load(self.assetFileName)
@@ -16,7 +17,7 @@ class WinnerComponent(Component):
             
     def render(self, surface):
         #for win
-        if len(listBrick)>30 and self.image != None:
+        if len(listBrick)>self.n_actor and self.image != None:
             rect = self.image.get_rect()
             rect.centerx = self.owner.x
             rect.centery = self.owner.y

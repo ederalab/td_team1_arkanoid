@@ -6,7 +6,7 @@ counter_center = []
 counter = [1, 2, 3]
 class BouncingMovementComponent(Component):
     # Owner could be empty at first
-    def __init__(self, name, actor, boundingRect, vx, vy):
+    def __init__(self, name, actor, boundingRect, vx, vy, n_actor):
         from .engine import Engine
         
         engine = Engine() # this is a singleton, don't worry too much
@@ -17,6 +17,7 @@ class BouncingMovementComponent(Component):
         global counter_center
         global counter 
         global listCollider
+        self.n_actor = n_actor
         self.boundingRect = boundingRect
 
     # I could implement some debugging rendering here
@@ -30,7 +31,7 @@ class BouncingMovementComponent(Component):
         self.owner.y += self.vy * deltaTime
         
         #if gameover or winner
-        if len(counter)<1 or len(listBrick)>30:
+        if len(counter)<1 or len(counter_center)<1 or len(listBrick)>self.n_actor:
             self.owner.x = 320
             self.owner.y = 580
             self.vx = 0
@@ -74,7 +75,7 @@ class BouncingMovementComponent(Component):
         if key == pygame.locals.K_SPACE:
             self.owner.x = 320
             self.owner.y = 580
-            self.vx = 150
-            self.vy = -150
+            self.vx = self.vx
+            self.vy = self.vy
             if len(counter_center)<1:
                 counter_center.append(1)
