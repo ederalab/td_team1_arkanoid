@@ -29,7 +29,7 @@ class FloatingMovementComponent(Component):
             self.vx = 0
             
         #center base when press space or lose or win
-        if len(counter_center)==2 or len(counter)<1 or len(listBrick)>self.n_actor:
+        if len(counter_center)==1 or len(counter)<1 or len(listBrick)>self.n_actor:
             self.owner.x = 320
             self.vx = 0
             counter_center.clear()
