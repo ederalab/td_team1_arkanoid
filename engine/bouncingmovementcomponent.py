@@ -12,13 +12,15 @@ class BouncingMovementComponent(Component):
         engine = Engine() # this is a singleton, don't worry too much
         engine.inputSystem.bindToKeyboard(pygame.locals.K_SPACE, self.keyPressed)
         super().__init__(name, actor)
-        self.vx = vx
-        self.vy = vy
+        self.real_vx = vx
+        self.real_vy = vy
         global counter_center
         global counter 
         global listCollider
         self.n_actor = n_actor
         self.boundingRect = boundingRect
+        self.vx = 0
+        self.vy = 0
 
     # I could implement some debugging rendering here
     def render(self, surface):
@@ -29,9 +31,15 @@ class BouncingMovementComponent(Component):
         
         self.owner.x += self.vx * deltaTime
         self.owner.y += self.vy * deltaTime
+        #to start game
+        if len(listBrick)<1:
+            self.owner.x = 320
+            self.owner.y = 580
+            self.vx= 0
+            self.vy= 0
         
         #if gameover or winner
-        if len(counter)<1 or len(counter_center)<1 or len(listBrick)>self.n_actor:
+        if len(counter)<1 or len(listBrick)>self.n_actor:
             self.owner.x = 320
             self.owner.y = 580
             self.vx = 0
@@ -49,6 +57,7 @@ class BouncingMovementComponent(Component):
         if self.owner.y > 615:
             if len(counter)>0:
                 counter.pop()
+                counter_center.append(1)
                 self.owner.x = 320
                 self.owner.y = 580
                 self.vx= 0
@@ -69,13 +78,16 @@ class BouncingMovementComponent(Component):
             listCollider.clear()
             listCollider.append(base)
             
+        
+            
             
     #to start press space
     def keyPressed(self, key):
         if key == pygame.locals.K_SPACE:
             self.owner.x = 320
             self.owner.y = 580
-            self.vx = self.vx
-            self.vy = self.vy
-            if len(counter_center)<1:
+            self.vx = self.real_vx
+            self.vy = self.real_vy
+            if len(counter_center)<1 and len(listBrick)<1:
                 counter_center.append(1)
+                listBrick.append(1)

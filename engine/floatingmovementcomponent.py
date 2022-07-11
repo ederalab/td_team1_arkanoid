@@ -1,3 +1,4 @@
+from itertools import count
 import pygame.locals
 from .component import *
 from .bouncingmovementcomponent import *
@@ -26,9 +27,9 @@ class FloatingMovementComponent(Component):
         
         if self.owner.x < 75:
             self.vx = 0
-        
+            
         #center base when press space or lose or win
-        if len(counter_center)==1 or len(counter)<1 or len(listBrick)>self.n_actor:
+        if len(counter_center)==2 or len(counter)<1 or len(listBrick)>self.n_actor:
             self.owner.x = 320
             self.vx = 0
             counter_center.clear()
@@ -43,9 +44,9 @@ class FloatingMovementComponent(Component):
         if key == pygame.locals.K_LEFT:
             if self.owner.x < 40:
                 self.owner.x = 40
-            else: self.vx = -160
+            else: self.vx = -200
         if key == pygame.locals.K_RIGHT:
             if self.owner.x > 600:
                 self.owner.x = 600
-            else: self.vx = 160
+            else: self.vx = 200
         
